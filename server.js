@@ -3,6 +3,8 @@ constexpress = require('express');
 constpath = require('path');
 constcookieParser = require('cookie-parser');
 constlogger = require('morgan');
+require('dotenv').config();
+require('./config/database');
 
 constindexRouter = require('./routes/index');
 constusersRouter = require('./routes/users');
