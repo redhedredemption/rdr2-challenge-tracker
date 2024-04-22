@@ -4,7 +4,7 @@ const passport = require("passport");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'RDR2 Challenge Tracker' });
+  res.render('home', { title: 'RDR2 Challenge Tracker' });
 });
 
 router.get('/auth/google', passport.authenticate(
