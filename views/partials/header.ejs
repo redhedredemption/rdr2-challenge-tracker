@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+	<nav>
+		<a href="/challengeCategories">All Challenege Categories</a>
+		<% if (user) { %>
+		  <a href="/challenges/new"	>
+			  Add challenge</a>
+		  <a href="/tasks/new" >Add Task</a>
+		  <a href="/logout">LOG OUT</a>
+		<% } else { %>
+		  <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+		<% } %>
+	  </nav>
+	<main>
