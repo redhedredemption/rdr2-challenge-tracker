@@ -1,3 +1,10 @@
+nav {
+  position: fixed; /* Fix the position of the navigation bar */
+  top: 0; /* Position it at the top of the viewport */
+  width: 100%; /* Make it span the entire width */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
 .special-elite-regular {
   font-family: "Special Elite", system-ui;
   font-weight: 400;
@@ -6,7 +13,7 @@
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Special Elite", sans-serif;
 }
 
 a {
