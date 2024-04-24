@@ -73,10 +73,13 @@ exports.updateChallenge = async (req, res) => {
         if (!challenge) {
             return res.status(404).json({ message: 'Challenge not found' });
         }
+        // Update challenge properties with data from the form
         challenge.name = req.body.name;
         challenge.category = req.body.category;
         challenge.steps = req.body.steps;
+        challenge.status = req.body.status;
 
+        // Save the updated challenge to the database
         const updatedChallenge = await challenge.save();
         res.redirect(`/challenges/${updatedChallenge._id}`);
     } catch (err) {

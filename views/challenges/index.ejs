@@ -20,7 +20,7 @@
     <ul class="challenges-list">
         <% challenges.forEach(challenge => { %>
             <li class="challenge-item">
-                <h2><%= challenge.title %></h2>
+                <h2><%= challenge.name %></h2>
                 <p>Description: <%= challenge.description %></p>
                 <a href="/challenges/<%= challenge._id %>">View Details</a>
                 <a href="/challenges/<%= challenge._id %>/edit">Edit</a>

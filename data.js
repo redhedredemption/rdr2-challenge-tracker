@@ -1,7 +1,7 @@
 // exports.challenges = {
 //     'Herbalist': [
 //       {
-//         title: 'Herbalist Challenge 1: Pick Six Yarrow',
+//         name: 'Herbalist Challenge 1: Pick Six Yarrow',
 //         description: 'Pick six Yarrow',
 //         steps: [
 //           {
@@ -12,7 +12,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 2: Pick and Eat Four Species of Berry',
+//         name: 'Herbalist Challenge 2: Pick and Eat Four Species of Berry',
 //         description: 'Pick and Eat Four Species of Berry',
 //         steps: [
 //           {
@@ -51,7 +51,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 3: Craft Seven Items Using Sage as an Ingredient',
+//         name: 'Herbalist Challenge 3: Craft Seven Items Using Sage as an Ingredient',
 //         description: 'Craft Seven Items Using Sage as an Ingredient',
 //         steps: [
 //           {
@@ -62,7 +62,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 4: Pick Five Mushrooms and Feed Them to Your Horse',
+//         name: 'Herbalist Challenge 4: Pick Five Mushrooms and Feed Them to Your Horse',
 //         description: 'Pick Five Mushrooms and Feed Them to Your Horse',
 //         steps: [
 //           {
@@ -73,7 +73,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 5: Craft Nine Items Using Indian Tobacco as an Ingredient',
+//         name: 'Herbalist Challenge 5: Craft Nine Items Using Indian Tobacco as an Ingredient',
 //         description: 'Craft Nine Items Using Indian Tobacco as an Ingredient',
 //         steps: [
 //           {
@@ -84,7 +84,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 6: Pick 15 Different Species of Herbs',
+//         name: 'Herbalist Challenge 6: Pick 15 Different Species of Herbs',
 //         description: 'Pick 15 Different Species of Herbs',
 //         steps: [
 //           {
@@ -95,7 +95,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 7: Craft and Use Five Special Miracle Tonics',
+//         name: 'Herbalist Challenge 7: Craft and Use Five Special Miracle Tonics',
 //         description: 'Craft and Use Five Special Miracle Tonics',
 //         steps: [
 //           {
@@ -106,7 +106,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 8: Use Oleander to Craft Six Poison Weapons (includes Poison Throwing Knife)',
+//         name: 'Herbalist Challenge 8: Use Oleander to Craft Six Poison Weapons (includes Poison Throwing Knife)',
 //         description: 'Use Oleander to Craft Six Poison Weapons (includes Poison Throwing Knife)',
 //         steps: [
 //           {
@@ -117,7 +117,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 9: Pick One of Each Species of Herb',
+//         name: 'Herbalist Challenge 9: Pick One of Each Species of Herb',
 //         description: 'Pick One of Each Species of Herb',
 //         steps: [
 //           { description: 'Step 1: Pick Alaskan Ginseng. (Location: Ambarino, Big Valley)', completed: false },
@@ -167,7 +167,7 @@
 //         status: false
 //       },
 //       {
-//         title: 'Herbalist Challenge 10: Season and Cook all Eleven Types of Meat',
+//         name: 'Herbalist Challenge 10: Season and Cook all Eleven Types of Meat',
 //         description: 'Season and cook all eleven types of meat',
 //         steps: [
 //           {

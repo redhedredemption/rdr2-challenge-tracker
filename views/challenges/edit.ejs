@@ -1,11 +1,21 @@
-<%- include ('../partials/header', { title: 'Edit Challenge' }) %>
+<%- include('../partials/header', { title: 'Edit Challenge' }) %>
+
 <h1>Edit Challenge</h1>
 <form action="/challenges/<%= challenge._id %>?_method=PUT" method="POST">
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title" value="<%= challenge.title %>">
-    <br>
-    <label for="description">Description:</label>
-    <input type="text" id="description" name="description" value="<%= challenge.description %>">
+    <label for="name">Challenge:</label>
+    <select id="name" name="name">
+        <option value="">Select One</option>
+        <option value="Challenge 1" <%= (challenge.name === 'Challenge 1') ? 'selected' : '' %>>Challenge 1</option>
+        <option value="Challenge 2" <%= (challenge.name === 'Challenge 2') ? 'selected' : '' %>>Challenge 2</option>
+        <option value="Challenge 3" <%= (challenge.name === 'Challenge 3') ? 'selected' : '' %>>Challenge 3</option>
+        <option value="Challenge 4" <%= (challenge.name === 'Challenge 4') ? 'selected' : '' %>>Challenge 4</option>
+        <option value="Challenge 5" <%= (challenge.name === 'Challenge 5') ? 'selected' : '' %>>Challenge 5</option>
+        <option value="Challenge 6" <%= (challenge.name === 'Challenge 6') ? 'selected' : '' %>>Challenge 6</option>
+        <option value="Challenge 7" <%= (challenge.name === 'Challenge 7') ? 'selected' : '' %>>Challenge 7</option>
+        <option value="Challenge 8" <%= (challenge.name === 'Challenge 8') ? 'selected' : '' %>>Challenge 8</option>
+        <option value="Challenge 9" <%= (challenge.name === 'Challenge 9') ? 'selected' : '' %>>Challenge 9</option>
+        <option value="Challenge 10" <%= (challenge.name === 'Challenge 10') ? 'selected' : '' %>>Challenge 10</option>
+    </select>
     <br>
     <label for="category">Category:</label>
     <select id="category" name="category">
@@ -21,13 +31,18 @@
         <option value="Weapons Expert" <%= (challenge.category === 'Weapons Expert') ? 'selected' : '' %>>Weapons Expert</option>
     </select>
     <br>
-    <label for="currentStep">Current Step:</label>
-    <input type="text" id="currentStep" name="currentStep" value="<%= challenge.currentStep %>">
+    <label for="steps">Steps:</label>
+    <textarea id="steps" name="steps"><%= challenge.steps %></textarea>
     <br>
-    <input type="checkbox" id="status" name="status" <% if (challenge.status === 'Completed') { %> checked <% } %>>
-    <label for="status">Completed</label>
+    <label for="status">Status:</label>
+    <select id="status" name="status">
+        <option value="Incomplete" <%= (challenge.status === 'Incomplete') ? 'selected' : '' %>>Incomplete</option>
+        <option value="In Progress" <%= (challenge.status === 'In Progress') ? 'selected' : '' %>>In Progress</option>
+        <option value="Complete" <%= (challenge.status === 'Complete') ? 'selected' : '' %>>Complete</option>
+    </select>
     <br>
     <button type="submit">Update Challenge</button>
 </form>
 <a href="/challenges/<%= challenge._id %>">Back to Details</a>
+
 <%- include('../partials/footer') %>
