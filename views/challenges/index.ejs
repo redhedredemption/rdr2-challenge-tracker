@@ -1,3 +1,12 @@
-<% include partials/header %>
+<%- include('../partials/header', { title: 'Challenges' }) %>
+
+<h1>Challenges</h1>
+<ul>
+    <% challenges.forEach(challenge => { %>
+        <li>
+            <a href="/challenges/<%= challenge._id %>"><%= challenge.title %></a>
+        </li>
+    <% }); %>
+</ul>
 
 <% include partials/footer %>

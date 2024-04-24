@@ -1,3 +1,16 @@
-<% include partials/header %>
+<%- include('../partials/header', { title: challenge.title }) %>
+
+<h1><%= challenge.title %></h1>
+<p><strong>Category:</strong> <%= challenge.category %></p>
+<p><strong>Tasks:</strong></p>
+<ul>
+    <% challenge.tasks.forEach(task => { %>
+        <li><%= task %></li>
+    <% }); %>
+</ul>
+<a href="/challenges/<%= challenge._id %>/edit">Edit</a>
+<form action="/challenges/<%= challenge._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+</form>
 
 <% include partials/footer %>
