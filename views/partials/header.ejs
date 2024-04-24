@@ -12,10 +12,11 @@
 <body>
     <nav class="special-elite-regular">
 		<a href="/">Home</a>
-		<a href="/categories">All Challenge Categories</a>
+		<a href="/challenges">All Challenge Categories</a>
 		<% if (user) { %>
 			<a href="/challenges/new">Add Challenge</a>
 			<a href="/tasks/new">Add Task</a>
+			<a href="/user/progress">Your Progress</a>
 			<div class="user-login">
 				<img src="<%= user.avatar %>" class="user-avatar" alt="User Avatar">
 				<span><%= user.name %></span>

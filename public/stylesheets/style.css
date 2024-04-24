@@ -92,6 +92,19 @@ nav .user-login a {
   margin-left: 10px; /* Ensures spacing from the username */
 }
 
+.login {
+  display: inline-flex; /* Use flex to align items inline */
+  align-items: center;  /* Align items vertically */
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login img {
+  height: 20px; /* Control the size of the image */
+  margin-left: 5px; /* Space between text and image */
+}
 
 footer {
   text-align: center; 

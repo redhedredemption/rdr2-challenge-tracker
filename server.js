@@ -12,7 +12,7 @@ require('./config/database');
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
-const categoriesRouter = require('./routes/categories');
+const challengesRouter = require('./routes/challenges');
 
 const app = express();
 
@@ -39,7 +39,7 @@ app.use(function (req, res, next) {
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/categories', categoriesRouter);
+app.use('/challenges', challengesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
