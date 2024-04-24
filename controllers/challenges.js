@@ -1,8 +1,9 @@
 const Challenge = require('../models/challenge');
 
 // Render form for creating a new challenge
-exports.getNewChallengeForm = (req, res) => {
-    res.render('challenges/new');
+exports.getNewChallengeForm = async (req, res) => {
+    const challenges = await Challenge.find();
+    res.render('challenges/new', {challenges});
 };
 
 // Render form for editing an existing challenge

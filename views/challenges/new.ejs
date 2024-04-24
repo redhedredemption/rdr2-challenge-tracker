@@ -1,38 +1,14 @@
 <%- include('../partials/header', { title: 'New Challenge' }) %>
 
 <h1>New Challenge</h1>
-<form action="/challenges" method="POST">
+<form action="/progress" method="POST">
     <label for="name">Challenge:</label>
     <select id="name" name="name">
         <option value="">Select One</option>
-        <option value="Challenge 1">Challenge 1</option>
-        <option value="Challenge 2">Challenge 2</option>
-        <option value="Challenge 3">Challenge 3</option>
-        <option value="Challenge 4">Challenge 4</option>
-        <option value="Challenge 5">Challenge 5</option>
-        <option value="Challenge 6">Challenge 6</option>
-        <option value="Challenge 7">Challenge 7</option>
-        <option value="Challenge 8">Challenge 8</option>
-        <option value="Challenge 9">Challenge 9</option>
-        <option value="Challenge 10">Challenge 10</option>
+        <%- challenges.map(c => 
+      `<option value="${c._id}">${c.name}</option>`
+    ).join('') %>
     </select>
-    <br>
-    <label for="category">Category:</label>
-    <select id="category" name="category">
-        <option value="">Select One</option>
-        <option value="Bandit">Bandit</option>
-        <option value="Explorer">Explorer</option>
-        <option value="Gambler">Gambler</option>
-        <option value="Herbalist">Herbalist</option>
-        <option value="Horseman">Horseman</option>
-        <option value="Master Hunter">Master Hunter</option>
-        <option value="Sharpshooter">Sharpshooter</option>
-        <option value="Survivalist">Survivalist</option>
-        <option value="Weapons Expert">Weapons Expert</option>
-    </select>
-    <br>
-    <label for="steps">Steps:</label>
-    <textarea id="steps" name="steps"></textarea>
     <br>
     <label for="status">Status:</label>
     <select id="status" name="status">

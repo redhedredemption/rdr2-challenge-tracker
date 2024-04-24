@@ -1,0 +1,17 @@
+<%- include('../partials/header', { title: 'Challenge Details' }) %>
+
+<% progress.challenges.forEach(challenge => { %>
+    <li class="challenge-item">
+        <h2><%= challenge.challenge.name %></h2>
+        <p>Description: <%= challenge.challenge.description %></p>
+        <p>Status: <%= challenge.status %></p>
+        <a href="/challenges/<%= challenge._id %>">View Details</a>
+        <a href="/challenges/<%= challenge._id %>/edit">Edit</a>
+        <form action="/challenges/<%= challenge._id %>" method="POST" style="display: inline;">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn-delete">Delete</button>
+        </form>
+    </li>
+<% }); %>
+
+<%- include('../partials/footer') %>

@@ -18,10 +18,11 @@
     </div>
 
     <ul class="challenges-list">
-        <% challenges.forEach(challenge => { %>
+        <% progress.challenges.forEach(challenge => { %>
             <li class="challenge-item">
-                <h2><%= challenge.name %></h2>
-                <p>Description: <%= challenge.description %></p>
+                <h2><%= challenge.challenge.name %></h2>
+                <p>Description: <%= challenge.challenge.description %></p>
+                <p>Status: <%= challenge.status %></p>
                 <a href="/challenges/<%= challenge._id %>">View Details</a>
                 <a href="/challenges/<%= challenge._id %>/edit">Edit</a>
                 <form action="/challenges/<%= challenge._id %>" method="POST" style="display: inline;">

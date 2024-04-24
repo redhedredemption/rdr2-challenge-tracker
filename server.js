@@ -13,6 +13,7 @@ require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const challengesRouter = require('./routes/challenges');
+const progressRouter = require('./routes/progress');
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/challenges', challengesRouter);
+app.use('/progress', progressRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

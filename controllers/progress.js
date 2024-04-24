@@ -1,0 +1,38 @@
+const Progress = require('../models/progress');
+const Challenge = require('../models/challenge');
+const { challenges } = require('../data');
+
+module.exports = {
+    addToProgress,
+    index
+};
+
+async function addToProgress(req, res) {
+    console.log(req.body)
+    let progress = await Progress.findOne({user: req.user._id})
+    //If there has been no progress so far, this will create a progress file for them
+    if (!progress){
+        progress = await Progress.create({
+            user: req.user._id,
+            challenges: []
+        })
+        await progress.save()
+    }
+    let challengeProgress = await Progress.findOne({user: req.user._id, 'challenges._id': req.body.name})
+    if (challengeProgress) return res.redirect('/challenges/new')
+    let challengeStatus = {
+        challenge: req.body.name,
+        status: req.body.status,
+        user: req.user._id,
+        }
+    progress.challenges.push(challengeStatus) //pushing challenge to progress challenges array
+    await progress.save()
+    res.redirect(`/challenges`)
+};
+
+async function index(req, res) {
+    const progress = await Progress.findOne({user: req.user._id})
+    .populate('challenges.challenge')
+    console.log(progress)
+    res.render('challenges/index', {progress})
+}
