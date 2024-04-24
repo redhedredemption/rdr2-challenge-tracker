@@ -21,10 +21,18 @@ exports.getEditChallengeForm = async (req, res) => {
 // Get all challenges and render the index view with the challenges data
 exports.getAllChallenges = async (req, res) => {
     try {
-        const challenges = await Challenge.find();
-        res.render('challenges/index', { challenges });
-    } catch (err) {
-        res.status(500).json({ message: err.message });
+        let query = {};
+        const filter = req.query.filter; // Access the filter query parameter from the URL
+
+        if (filter && filter !== 'all') {
+            query.category = filter; // Add a category filter to the query if not 'all'
+        }
+
+        const challenges = await Challenge.find(query); // Fetch challenges from the database based on the query
+        res.render('challenges/index', { challenges }); // Render the page with the filtered challenges
+    } catch (error) {
+        console.error('Error fetching challenges:', error);
+        res.status(500).send("Failed to retrieve challenges.");
     }
 };
 
@@ -44,9 +52,10 @@ exports.getChallengeById = async (req, res) => {
 // Process form submission for creating a new challenge
 exports.createChallenge = async (req, res) => {
     const challenge = new Challenge({
-        title: req.body.title,
+        name: req.body.name,
         category: req.body.category,
-        tasks: req.body.tasks,
+        steps: req.body.steps,
+        status: req.body.status
     });
 
     try {
@@ -64,9 +73,9 @@ exports.updateChallenge = async (req, res) => {
         if (!challenge) {
             return res.status(404).json({ message: 'Challenge not found' });
         }
-        challenge.title = req.body.title;
+        challenge.name = req.body.name;
         challenge.category = req.body.category;
-        challenge.tasks = req.body.tasks;
+        challenge.steps = req.body.steps;
 
         const updatedChallenge = await challenge.save();
         res.redirect(`/challenges/${updatedChallenge._id}`);

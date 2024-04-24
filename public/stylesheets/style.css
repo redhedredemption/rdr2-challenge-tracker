@@ -109,3 +109,65 @@ nav .user-login a {
 footer {
   text-align: center; 
 }
+
+ /* From Edit Form:
+/* Style the form container 
+form {
+  width: 400px;
+  margin: auto;
+}
+
+/* Style form labels 
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style input fields 
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style select dropdown 
+select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style checkbox 
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+*/
+
+/* For Challenges Index:
+.filters {
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+}
+
+.filters a {
+    margin-right: 10px;
+    margin-bottom: 10px; 
+    text-decoration: none;
+    color: blue;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.filters a:hover, .filters a:focus {
+    text-decoration: none;
+    background-color: #f0f0f0;
+}
+*/

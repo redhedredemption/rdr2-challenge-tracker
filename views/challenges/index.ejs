@@ -1,12 +1,36 @@
 <%- include('../partials/header', { title: 'Challenges' }) %>
 
-<h1>Challenges</h1>
-<ul>
-    <% challenges.forEach(challenge => { %>
-        <li>
-            <a href="/challenges/<%= challenge._id %>"><%= challenge.title %></a>
-        </li>
-    <% }); %>
-</ul>
+<main class="container">
+    <h1>Challenges List</h1>
+    <a href="/challenges/new" class="btn btn-primary">Add New Challenge</a>
+
+    <div class="filters">
+        <a href="/challenges?filter=all">All</a>
+        <a href="/challenges?filter=Bandit">Bandit</a>
+        <a href="/challenges?filter=Explorer">Explorer</a>
+        <a href="/challenges?filter=Gambler">Gambler</a>
+        <a href="/challenges?filter=Herbalist">Herbalist</a>
+        <a href="/challenges?filter=Horseman">Horseman</a>
+        <a href="/challenges?filter=Master Hunter">Master Hunter</a>
+        <a href="/challenges?filter=Sharpshooter">Sharpshooter</a>
+        <a href="/challenges?filter=Survivalist">Survivalist</a>
+        <a href="/challenges?filter=Weapons Expert">Weapons Expert</a>
+    </div>
+
+    <ul class="challenges-list">
+        <% challenges.forEach(challenge => { %>
+            <li class="challenge-item">
+                <h2><%= challenge.title %></h2>
+                <p>Description: <%= challenge.description %></p>
+                <a href="/challenges/<%= challenge._id %>">View Details</a>
+                <a href="/challenges/<%= challenge._id %>/edit">Edit</a>
+                <form action="/challenges/<%= challenge._id %>" method="POST" style="display: inline;">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn-delete">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</main>
 
 <%- include('../partials/footer') %>
