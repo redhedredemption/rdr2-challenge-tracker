@@ -1,218 +1,101 @@
-exports.tasks = [
-  {description: 'Step 1: Pick a Blackberry (Location: Big Valley, West Elizabeth)',
-  isCompleted: false},
-]
-
 exports.challenges = [
-      {
-        name: 'Herbalist Challenge 1: Pick Six Yarrow',
-        description: 'Pick six Yarrow',
-        category: "Herbalist",
-      },
-      // {
-      //   name: 'Herbalist Challenge 2: Pick and Eat Four Species of Berry',
-      //   description: 'Pick and Eat Four Species of Berry',
-      //   steps: [
-      //     {
-      //       description: 'Step 1: Pick a Blackberry (Location: Big Valley, West Elizabeth)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 2: Eat the Blackberry',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 3: Pick an Evergreen Huckleberry (Location: Along the Kamassa River, passing through Lemoyne and New Hanover)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 4: Eat the Evergreen Huckleberry',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 5: Pick a Red Raspberry (Location: The Heartlands, New Hanover)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 6: Eat the Red Raspberry',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 7: Pick a Wintergreen Berry (Location: Cumberland Forest, New Hanover; Big Valley, West Elizabeth)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 8: Eat the Wintergreen Berry',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 3: Craft Seven Items Using Sage as an Ingredient',
-      //   description: 'Craft Seven Items Using Sage as an Ingredient',
-      //   steps: [
-      //     {
-      //       description: 'Craft seven items using Sage as an ingredient',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 4: Pick Five Mushrooms and Feed Them to Your Horse',
-      //   description: 'Pick Five Mushrooms and Feed Them to Your Horse',
-      //   steps: [
-      //     {
-      //       description: 'Pick five mushrooms and feed them to your horse',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 5: Craft Nine Items Using Indian Tobacco as an Ingredient',
-      //   description: 'Craft Nine Items Using Indian Tobacco as an Ingredient',
-      //   steps: [
-      //     {
-      //       description: 'Craft nine items using Indian Tobacco as an ingredient',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 6: Pick 15 Different Species of Herbs',
-      //   description: 'Pick 15 Different Species of Herbs',
-      //   steps: [
-      //     {
-      //       description: 'Pick 15 different species of herbs',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 7: Craft and Use Five Special Miracle Tonics',
-      //   description: 'Craft and Use Five Special Miracle Tonics',
-      //   steps: [
-      //     {
-      //       description: 'Craft and use five special miracle tonics',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 8: Use Oleander to Craft Six Poison Weapons (includes Poison Throwing Knife)',
-      //   description: 'Use Oleander to Craft Six Poison Weapons (includes Poison Throwing Knife)',
-      //   steps: [
-      //     {
-      //       description: 'Use Oleander to craft six poison weapons (includes Poison Throwing Knife)',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 9: Pick One of Each Species of Herb',
-      //   description: 'Pick One of Each Species of Herb',
-      //   steps: [
-      //     { description: 'Step 1: Pick Alaskan Ginseng. (Location: Ambarino, Big Valley)', completed: false },
-      //     { description: 'Step 2: Pick American Ginseng. (Location: West Elizabeth)', completed: false },
-      //     { description: 'Step 3: Pick Bay Bolete. (Locations: Tall Trees, West Elizabeth; Caliban\'s Seat, near the Dakota River)', completed: false },
-      //     { description: 'Step 4: Pick Blackberry. (Location: Big Valley, West Elizabeth)', completed: false },
-      //     { description: 'Step 5: Pick Blackcurrant. (Location: Gaptooth Ridge, Cholla Springs)', completed: false },
-      //     { description: 'Step 6: Pick Burdock Root. (Location: Ambarino)', completed: false },
-      //     { description: 'Step 7: Pick Chanterelles. (Locations: Ambarino, Ringneck Creek)', completed: false },
-      //     { description: 'Step 8: Pick Common Bulrush. (Frequently found by rivers)', completed: false },
-      //     { description: 'Step 9: Pick Creeping Thyme. (Locations: New Hanover, Big Valley, New Austin)', completed: false },
-      //     { description: 'Step 10: Pick Desert Sage. (Location: Gaptooth Ridge)', completed: false },
-      //     { description: 'Step 11: Pick English Mace. (Locations: Rio Bravo; Southern Gaptooth Ridge; Grizzlies East)', completed: false },
-      //     { description: 'Step 12: Pick Evergreen Huckleberry. (Near the Kamassa River, in: Lemoyne, New Hanover)', completed: false },
-      //     { description: 'Step 13: Pick Golden Currant. (Locations: Roanoke Ridge, Tall Trees)', completed: false },
-      //     { description: 'Step 14: Pick Hummingbird Sage. (Forested areas, in: Scarlett Meadows, Tall Trees)', completed: false },
-      //     { description: 'Step 15: Pick Indian Tobacco. (Locations: Near clumps of trees, in: The Heartlands, Tall Trees, Great Plains)', completed: false },
-      //     { description: 'Step 16: Pick Milkweed. (Locations: Near riverbanks, in: Lemoyne)', completed: false },
-      //     { description: 'Step 17: Pick Oleander Sage. (Locations: Near riverbanks, in: Bayou Nwa)', completed: false },
-      //     { description: 'Step 18: Pick Oregano. (Widespread throughout most of the game map)', completed: false },
-      //     { description: 'Step 19: Pick Parasol Mushroom. (Locations: The Heartlands, New Hanover)', completed: false },
-      //     { description: 'Step 20: Pick Prairie Poppy. (Location: Great Plains)', completed: false },
-      //     { description: 'Step 21: Pick Ram\'s Head. (Locations: Ambarino, West Elizabeth)', completed: false },
-      //     { description: 'Step 22: Pick Red Raspberry. (Locations: New Hanover)', completed: false },
-      //     { description: 'Step 23: Pick Red Sage. (Location: Rio Bravo)', completed: false },
-      //     { description: 'Step 24: Pick Vanilla Flower. (Location: Bayou Nwa)', completed: false },
-      //     { description: 'Step 25: Pick Violet Snowdrop. (Locations: Ambarino)', completed: false },
-      //     { description: 'Step 26: Pick Wild Carrot. (Locations: New Hanover, West Elizabeth)', completed: false },
-      //     { description: 'Step 27: Pick Wild Feverfew. (Locations: Hennigan\'s Stead, Cholla Springs)', completed: false },
-      //     { description: 'Step 28: Pick Wild Mint. (Locations: Big Valley)', completed: false },
-      //     { description: 'Step 29: Pick Wintergreen Berry. (Locations: Cumberland Forest, Grizzlies East)', completed: false },
-      //     { description: 'Step 30: Pick Yarrow. (Locations: The Heartlands, New Hanover)', completed: false },
-      //     { description: 'Step 31: Pick Acuna\'s Star Orchid. (Location: Eastern Bayou Nwa)', completed: false },
-      //     { description: 'Step 32: Pick Cigar Orchid. (Locations: Eastern Bluewater Marsh, Eastern Bayou Nwa)', completed: false },
-      //     { description: 'Step 33: Pick Clam Shell Orchid. (Locations: Southern Bayou Nwa)', completed: false },
-      //     { description: 'Step 34: Pick Dragon\'s Mouth Orchid. (Location: Grizzlies East)', completed: false },
-      //     { description: 'Step 35: Pick Ghost Orchid. (Location: Southern Bayou Nwa)', completed: false },
-      //     { description: 'Step 36: Pick Lady of the Night Orchid. (Location: Western Bayou Nwa)', completed: false },
-      //     { description: 'Step 37: Pick Lady Slipper Orchid. (Location: Big Valley)', completed: false },
-      //     { description: 'Step 38: Pick Moccasin Orchid. (Locations: Butcher Creek, Roanoke Valley)', completed: false },
-      //     { description: 'Step 39: Pick Night Scented Orchid. (Locations: Southern Scarlett Meadows, Southern Bayou Nwa)', completed: false },
-      //     { description: 'Step 40: Pick Queen\'s Orchid. (Locations: Lagras, Lakay)', completed: false },
-      //     { description: 'Step 41: Pick Rat Tail Orchid. (Locations: Lagras, Western Bluewater Marsh)', completed: false },
-      //     { description: 'Step 42: Pick Sparrow\'s Egg Orchid. (Locations: Roanoke Ridge, Near the Kamassa River)', completed: false },
-      //     { description: 'Step 43: Pick Spider Orchid. (Locations: Western Bayou Nwa)', completed: false }
-      //   ],
-      //   status: false
-      // },
-      // {
-      //   name: 'Herbalist Challenge 10: Season and Cook all Eleven Types of Meat',
-      //   description: 'Season and cook all eleven types of meat',
-      //   steps: [
-      //     {
-      //       description: 'Step 1: Season and cook Exotic Bird meat (Parakeet, Parrot, Pelican)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 2: Season and cook Tender Pork Loin (Boar, Peccary, Pig)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 3: Season and cook Plump Bird meat (Chicken, Goose, Turkey, Rooster)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 4: Season and cook Big Game Meat (Alligator, Bear, Cougar, Panther, Wolf)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 5: Season and cook Prime Beef Joint (Bison, Bull, Cow, Oxen)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 6: Season and cook Succulent Fish (Sockeye Salmon, Steelhead Trout)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 7: Season and cook Game Meat (Duck, Pheasant, Rabbit)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 8: Season and cook Flaky Fish (Redfin Pickerel, Perch, Chain Pickerel, Rock Bass, Muskie, Lake Sturgeon, Northern Pike, Largemouth Bass, Smallmouth Bass)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 9: Season and cook Crustacean (Crab)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 10: Season and cook Gristly Mutton (Goat, Ram, Sheep)',
-      //       completed: false
-      //     },
-      //     {
-      //       description: 'Step 11: Season and cook Mature Venison (Buck, Deer, Elk, Moose, Pronghorn)',
-      //       completed: false
-      //     }
-      //   ],
-      //   status: false
-      // }
-    ]
+  // Herbalist Challenges
+  { name: 'Herbalist Challenge 1: Pick Six Yarrow', description: 'Pick six Yarrow', category: "Herbalist" },
+  { name: 'Herbalist Challenge 2: Pick and eat four species of berry', description: 'Pick and eat four different species of berry', category: "Herbalist" },
+  { name: 'Herbalist Challenge 3: Craft seven items using sage as an ingredient', description: 'Craft seven items using sage', category: "Herbalist" },
+  { name: 'Herbalist Challenge 4: Pick five mushrooms and feed them to your horse', description: 'Pick five mushrooms and feed them to your horse', category: "Herbalist" },
+  { name: 'Herbalist Challenge 5: Craft nine items using Indian Tobacco as an ingredient', description: 'Craft nine items using Indian Tobacco', category: "Herbalist" },
+  { name: 'Herbalist Challenge 6: Pick 15 different species of herb', description: 'Pick fifteen different species of herbs', category: "Herbalist" },
+  { name: 'Herbalist Challenge 7: Craft and use five Special Miracle Tonics', description: 'Craft and use five Special Miracle Tonics', category: "Herbalist" },
+  { name: 'Herbalist Challenge 8: Use oleander to craft six poison weapons', description: 'Use oleander to craft six poison weapons', category: "Herbalist" },
+  { name: 'Herbalist Challenge 9: Pick one of each species of herb', description: 'Pick one of each type of herb available', category: "Herbalist" },
+  { name: 'Herbalist Challenge 10: Season and cook all 11 types of meat', description: 'Season and cook each type of meat', category: "Herbalist" },
+  // Sharpshooter Challenges
+  { name: 'Sharpshooter Challenge 1: Kill 3 flying birds', description: 'Kill three birds while they are airborne', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 2: Kill 2 different animal species in the same Dead Eye use', description: 'Kill two different species of animals in one use of Dead Eye', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 3: Kill 5 flying birds while on a moving train', description: 'Kill five birds from a moving train', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 4: Kill an enemy at least 80 feet away with a thrown tomahawk', description: 'Kill an enemy at least 80 feet away using a thrown tomahawk', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 5: Kill 6 animals without switching or reloading your weapon', description: 'Kill six animals without changing or reloading your weapon', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 6: Kill someone at least 660 feet away with a long scoped rifle', description: 'Use a long scoped rifle to kill someone from at least 660 feet away', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 7: Headshot 3 people in Dead Eye', description: 'Perform headshots on three people using Dead Eye', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 8: Disarm 3 enemies without reloading or switching your weapon', description: 'Disarm three enemies in succession without reloading or switching weapons', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 9: Shoot 3 people\'s hats off in the same Dead Eye use', description: 'Shoot the hats off three different people with one use of Dead Eye', category: "Sharpshooter" },
+  { name: 'Sharpshooter Challenge 10: Kill 3 flying birds with 3 consecutive long scoped rifle shots', description: 'Kill three birds in flight consecutively with a long scoped rifle', category: "Sharpshooter" },
+  // Bandit Challenges
+  { name: 'Bandit Challenge 1: Hold up 5 townsfolk', description: 'Hold up five townsfolk.', category: "Bandit" },
+  { name: 'Bandit Challenge 2: Rob two coaches', description: 'Rob two coaches or return two stolen coaches to the fence in one day.', category: "Bandit" },
+  { name: 'Bandit Challenge 3: Rob the cash register in any four shops in one day', description: 'Rob the cash register in any four shops in one day.', category: "Bandit" },
+  { name: 'Bandit Challenge 4: Rob three coaches in one day', description: 'Rob three coaches in one day.', category: "Bandit" },
+  { name: 'Bandit Challenge 5: Amass $250 bounty in one state', description: 'Amass a $250 bounty in one state.', category: "Bandit" },
+  { name: 'Bandit Challenge 6: Steal five horses and sell them to the horse fence', description: 'Steal five horses and sell them to the horse fence at Clemens Cove.', category: "Bandit" },
+  { name: 'Bandit Challenge 7: Rob $50 worth of cash and valuables from townsfolk or travelers', description: 'Rob $50 worth of cash and valuables from townsfolk or travelers.', category: "Bandit" },
+  { name: 'Bandit Challenge 8: Steal seven wagons and sell them to the fence', description: 'Steal seven wagons and sell them to the fence at Emerald Ranch.', category: "Bandit" },
+  { name: 'Bandit Challenge 9: Hogtie someone and leave them on the railroad 3 times', description: 'Hogtie someone and leave them on the railroad three times.', category: "Bandit" },
+  { name: 'Bandit Challenge 10: Complete five train robberies without dying or being caught', description: 'Complete five train robberies without dying or being caught.', category: "Bandit" },
+  // Explorer Challenges
+  { name: 'Explorer Challenge 1: Find a treasure map', description: 'Find a treasure map.', category: "Explorer" },
+  { name: 'Explorer Challenge 2: Find the treasure from the first map', description: 'Find the treasure indicated by the first map.', category: "Explorer" },
+  { name: 'Explorer Challenge 3: Find another treasure map', description: 'Find another treasure map.', category: "Explorer" },
+  { name: 'Explorer Challenge 4: Find the treasure from the second map', description: 'Find the treasure indicated by the second map.', category: "Explorer" },
+  { name: 'Explorer Challenge 5: Find a third treasure map', description: 'Find a third treasure map.', category: "Explorer" },
+  { name: 'Explorer Challenge 6: Find the treasure from the third map', description: 'Find the treasure indicated by the third map.', category: "Explorer" },
+  { name: 'Explorer Challenge 7: Find a fourth treasure map', description: 'Find a fourth treasure map.', category: "Explorer" },
+  { name: 'Explorer Challenge 8: Find the treasure from the fourth map', description: 'Find the treasure indicated by the fourth map.', category: "Explorer" },
+  { name: 'Explorer Challenge 9: Find a fifth treasure map', description: 'Find a fifth treasure map.', category: "Explorer" },
+  { name: 'Explorer Challenge 10: Find the treasure from the fifth map', description: 'Find the treasure indicated by the fifth map.', category: "Explorer" },
+  // Gambler Challenges
+  { name: 'Gambler Challenge 1: Win 5 hands of poker', description: 'Win five hands of poker.', category: "Gambler" },
+  { name: 'Gambler Challenge 2: In blackjack, double down and win the hand 5 times', description: 'In blackjack, double down and win the hand five times.', category: "Gambler" },
+  { name: 'Gambler Challenge 3: Win 3 games of Five Finger Fillet', description: 'Win three games of Five Finger Fillet.', category: "Gambler" },
+  { name: 'Gambler Challenge 4: Bust one poker table out in each location (Flatneck Station, Saint Denis, Valentine)', description: 'Bust one poker opponent out in each location: Flatneck Station, Saint Denis, and Valentine.', category: "Gambler" },
+  { name: 'Gambler Challenge 5: Win 3 rounds of dominoes without drawing any tiles against 2 or fewer opponents', description: 'Win three rounds of dominoes in a row without drawing any tiles.', category: "Gambler" },
+  { name: 'Gambler Challenge 6: Beat the blackjack dealer in two locations (Rhodes and Van Horn)', description: 'Beat the blackjack dealer in two locations: Rhodes and Van Horn.', category: "Gambler" },
+  { name: 'Gambler Challenge 7: Beat the five finger fillet player in every location (Strawberry, Valentine, Van Horn)', description: 'Beat the Five Finger Fillet player in every location: Strawberry, Valentine, Van Horn.', category: "Gambler" },
+  { name: 'Gambler Challenge 8: Win three hands of blackjack with three hits or more', description: 'Win three hands of blackjack with three hits or more.', category: "Gambler" },
+  { name: 'Gambler Challenge 9: Win three games of dominoes in a row', description: 'Win three games of dominoes in a row.', category: "Gambler" },
+  { name: 'Gambler Challenge 10: Win three hands of poker in a row', description: 'Win three hands of poker in a row.', category: "Gambler" },
+  // Horseman Challenges
+  { name: 'Horseman Challenge 1: Ride from Valentine to Rhodes in less than five minutes', description: 'Ride from Valentine to Rhodes on horseback in less than five minutes.', category: "Horseman" },
+  { name: 'Horseman Challenge 2: Jump over three obstacles in 15 seconds', description: 'Jump over three obstacles in 15 seconds while on horseback.', category: "Horseman" },
+  { name: 'Horseman Challenge 3: Ride from Strawberry to Saint Denis in less than nine minutes without touching any water', description: 'Ride from Strawberry to Saint Denis in less than nine minutes without touching any water.', category: "Horseman" },
+  { name: 'Horseman Challenge 4: Drag a victim for 3300 feet using a lasso from horseback', description: 'Drag a victim for 3300 feet using a lasso from horseback.', category: "Horseman" },
+  { name: 'Horseman Challenge 5: Trample five animals while on horseback', description: 'Trample five animals while on horseback.', category: "Horseman" },
+  { name: 'Horseman Challenge 6: Ride from Van Horn to Blackwater in less than 17 minutes without touching any water', description: 'Ride from Van Horn to Blackwater in less than 17 minutes without touching any water.', category: "Horseman" },
+  { name: 'Horseman Challenge 7: Kill seven enemies from horseback without dismounting', description: 'Kill seven enemies from horseback without dismounting.', category: "Horseman" },
+  { name: 'Horseman Challenge 8: Kill nine predators from horseback', description: 'Kill nine predators from horseback.', category: "Horseman" },
+  { name: 'Horseman Challenge 9: Ride from Van Horn to Strawberry in less than nine minutes using only crafted horse tonics', description: 'Ride from Van Horn to Strawberry in less than nine minutes using only crafted horse tonics.', category: "Horseman" },
+  { name: 'Horseman Challenge 10: Break every wild horse breed', description: 'Break every wild horse breed.', category: "Horseman" },
+  // Master Hunter Challenges
+  { name: 'Master Hunter Challenge 1: Skin 3 Deer', description: 'Skin three deer.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 2: Collect 3 Perfect Quality Rabbit Pelts', description: 'Collect three perfect quality rabbit pelts.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 3: Track 10 different animal species using your binoculars', description: 'Track ten different animal species using your binoculars.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 4: Call an animal and get a clean kill 5 times', description: 'Call an animal and get a clean kill five times.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 5: Skin 3 Black or Grizzly Bears', description: 'Skin three black or grizzly bears.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 6: Kill 5 Cougars with your bow, then skin them', description: 'Kill five cougars with your bow and skin them.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 7: Use bait to lure and kill both a herbivore and predator', description: 'Use bait to lure and kill both a herbivore and predator.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 8: Catch 3 fish without using a fishing rod', description: 'Catch three fish without using a fishing rod.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 9: Catch an opossum playing possum', description: 'Catch an opossum playing possum.', category: "Master Hunter" },
+  { name: 'Master Hunter Challenge 10: Find the legendary panther "Giaguaro" and take its pelt', description: 'Find the legendary panther "Giaguaro" and take its pelt.', category: "Master Hunter" },
+  // Survivalist Challenges
+  { name: 'Survivalist Challenge 1: Catch 3 Bluegill Fish', description: 'Catch three Bluegill fish.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 2: Hand five animals in to Pearson at camp or to the trapper', description: 'Hand five animals in to Pearson at camp or to the trapper.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 3: Kill 5 animals using a varmint rifle', description: 'Kill five animals using a varmint rifle.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 4: Craft a dynamite, fire, improved, poison, and small game arrow', description: 'Craft all types of arrows: dynamite, fire, improved, poison, and small game.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 5: Catch a fish in the Bayou from a riverboat and while standing on railroad tracks', description: 'Catch a fish in the Bayou from a riverboat and while standing on railroad tracks.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 6: Kill an animal scavenging a corpse five times', description: 'Kill an animal scavenging a corpse five times.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 7: Kill 8 small game animals with consecutive shots, using small game arrows', description: 'Kill eight small game animals with consecutive shots using small game arrows.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 8: Craft a homing tomahawk, improved tomahawk, volatile dynamite, and volatile fire bottle', description: 'Craft a homing tomahawk, improved tomahawk, volatile dynamite, and volatile fire bottle.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 9: Catch a fish that weighs at least 19 lbs', description: 'Catch a fish that weighs at least 19 lbs.', category: "Survivalist" },
+  { name: 'Survivalist Challenge 10: Find and catch all the legendary fish', description: 'Find and catch all the legendary fish.', category: "Survivalist" },
+  // Weapons Expert Challenges
+  { name: 'Weapons Expert Challenge 1: Kill 3 enemies with a knife', description: 'Kill three enemies with a knife.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 2: Kill 3 enemies in 10 seconds using only throwing knives', description: 'Kill three enemies in 10 seconds using only throwing knives.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 3: Kill 3 birds of prey using only a tomahawk', description: 'Kill three birds of prey using only a tomahawk.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 4: Kill 10 enemies with a shotgun using crafted ammo', description: 'Kill ten enemies with a shotgun using crafted ammo.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 5: Kill 5 mounted enemies, using one throwing knife per kill', description: 'Kill five mounted enemies, using one throwing knife per kill.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 6: Kill 4 enemies at the same time with a single stick of dynamite', description: 'Kill four enemies at the same time with a single stick of dynamite.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 7: Kill 4 consecutive enemies by throwing and retrieving the same tomahawk', description: 'Kill four consecutive enemies by throwing and retrieving the same tomahawk.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 8: Kill 15 enemies using a long-barreled sidearm', description: 'Kill fifteen enemies using a long-barreled sidearm.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 9: Kill 9 unaware enemies from behind, using the bow', description: 'Kill nine unaware enemies from behind using the bow.', category: "Weapons Expert" },
+  { name: 'Weapons Expert Challenge 10: Kill a grizzly bear without taking damage, using only throwing knives', description: 'Kill a grizzly bear without taking damage, using only throwing knives.', category: "Weapons Expert" }
+];

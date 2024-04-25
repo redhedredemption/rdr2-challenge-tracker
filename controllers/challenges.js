@@ -1,4 +1,5 @@
 const Challenge = require('../models/challenge');
+const Progress = require('../models/progress');
 
 // Render form for creating a new challenge
 exports.getNewChallengeForm = async (req, res) => {
@@ -22,15 +23,14 @@ exports.getEditChallengeForm = async (req, res) => {
 // Get all challenges and render the index view with the challenges data
 exports.getAllChallenges = async (req, res) => {
     try {
-        let query = {};
-        const filter = req.query.filter; // Access the filter query parameter from the URL
+        // Fetch progress data from the database or wherever it's stored
+        const progress = await Progress.findOne({ user: req.user._id });
 
-        if (filter && filter !== 'all') {
-            query.category = filter; // Add a category filter to the query if not 'all'
-        }
+        // Fetch challenges data from the database or wherever it's stored
+        const challenges = await Challenge.find();
 
-        const challenges = await Challenge.find(query); // Fetch challenges from the database based on the query
-        res.render('challenges/index', { challenges }); // Render the page with the filtered challenges
+        // Render the view and pass both progress and challenges data
+        res.render('challenges/index', { progress, challenges });
     } catch (error) {
         console.error('Error fetching challenges:', error);
         res.status(500).send("Failed to retrieve challenges.");

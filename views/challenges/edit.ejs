@@ -1,7 +1,8 @@
 <%- include('../partials/header', { title: 'Edit Challenge' }) %>
 
 <h1>Edit Challenge</h1>
-<form action="/challenges/<%= challenge._id %>?_method=PUT" method="POST">
+<form action="/challenges/<%= challenge._id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
     <label for="name">Challenge:</label>
     <select id="name" name="name">
         <option value="">Select One</option>

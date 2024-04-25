@@ -18,7 +18,7 @@ async function addToProgress(req, res) {
         })
         await progress.save()
     }
-    let challengeProgress = await Progress.findOne({user: req.user._id, 'challenges._id': req.body.name})
+    let challengeProgress = await Progress.findOne({user: req.user._id, 'challenges.challenge': {_id: req.body.name}})
     if (challengeProgress) return res.redirect('/challenges/new')
     let challengeStatus = {
         challenge: req.body.name,
@@ -27,12 +27,15 @@ async function addToProgress(req, res) {
         }
     progress.challenges.push(challengeStatus) //pushing challenge to progress challenges array
     await progress.save()
-    res.redirect(`/challenges`)
+    res.redirect(`/progress`)
 };
 
 async function index(req, res) {
-    const progress = await Progress.findOne({user: req.user._id})
-    .populate('challenges.challenge')
-    console.log(progress)
-    res.render('challenges/index', {progress})
+    try {
+        const progress = await Progress.findOne({ user: req.user._id }).populate('challenges.challenge');
+        res.render('progress/index', { progress });
+    } catch (error) {
+        console.error('Error fetching progress:', error);
+        res.status(500).send('Failed to retrieve progress.');
+    }
 }
