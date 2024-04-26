@@ -1,0 +1,25 @@
+# RDR2 Challenge Tracker
+
+## Description
+The RDR2 Challenge Tracker is a web application designed to help users track their progress in completing various challenges within the video game Red Dead Redemption 2 (RDR2). Users can create, update, and delete their progress on each challenge.
+
+## Screenshot(s)
+![Landing Page](/path/to/landing_page_screenshot.png)
+<!-- Add any other screenshots here -->
+
+## Technologies Used
+- Node.js
+- Express.js
+- MongoDB
+- Passport.js (for authentication)
+- EJS (Embedded JavaScript templates)
+
+## Getting Started
+To access the deployed app, visit [RDR2 Challenge Tracker](https://your-deployed-app-url.com).
+
+To view the project planning and progress, check out our Trello board [here](https://trello.com/your-trello-board-url).
+
+## Next Steps
+- Implement a feature to allow users to share their progress on social media platforms.
+- Add a feature to track statistics and achievements based on challenge completion.
+- Integrate with the Rockstar Games Social Club API to sync challenges directly from the game.
