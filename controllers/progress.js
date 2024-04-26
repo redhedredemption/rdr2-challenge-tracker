@@ -4,7 +4,7 @@ const { challenges } = require('../data');
 
 module.exports = {
     addToProgress,
-    index
+    index,
 };
 
 async function addToProgress(req, res) {

@@ -1,49 +1,17 @@
-<%- include('../partials/header', { title: 'Edit Challenge' }) %>
+<%- include('../partials/header', { title: 'New Challenge' }) %>
 
 <h1>Edit Challenge</h1>
-<form action="/challenges/<%= challenge._id %>" method="POST">
-    <input type="hidden" name="_method" value="PUT">
-    <label for="name">Challenge:</label>
-    <select id="name" name="name">
-        <option value="">Select One</option>
-        <option value="Challenge 1" <%= (challenge.name === 'Challenge 1') ? 'selected' : '' %>>Challenge 1</option>
-        <option value="Challenge 2" <%= (challenge.name === 'Challenge 2') ? 'selected' : '' %>>Challenge 2</option>
-        <option value="Challenge 3" <%= (challenge.name === 'Challenge 3') ? 'selected' : '' %>>Challenge 3</option>
-        <option value="Challenge 4" <%= (challenge.name === 'Challenge 4') ? 'selected' : '' %>>Challenge 4</option>
-        <option value="Challenge 5" <%= (challenge.name === 'Challenge 5') ? 'selected' : '' %>>Challenge 5</option>
-        <option value="Challenge 6" <%= (challenge.name === 'Challenge 6') ? 'selected' : '' %>>Challenge 6</option>
-        <option value="Challenge 7" <%= (challenge.name === 'Challenge 7') ? 'selected' : '' %>>Challenge 7</option>
-        <option value="Challenge 8" <%= (challenge.name === 'Challenge 8') ? 'selected' : '' %>>Challenge 8</option>
-        <option value="Challenge 9" <%= (challenge.name === 'Challenge 9') ? 'selected' : '' %>>Challenge 9</option>
-        <option value="Challenge 10" <%= (challenge.name === 'Challenge 10') ? 'selected' : '' %>>Challenge 10</option>
-    </select>
-    <br>
-    <label for="category">Category:</label>
-    <select id="category" name="category">
-        <option value="">Select One</option>
-        <option value="Bandit" <%= (challenge.category === 'Bandit') ? 'selected' : '' %>>Bandit</option>
-        <option value="Explorer" <%= (challenge.category === 'Explorer') ? 'selected' : '' %>>Explorer</option>
-        <option value="Gambler" <%= (challenge.category === 'Gambler') ? 'selected' : '' %>>Gambler</option>
-        <option value="Herbalist" <%= (challenge.category === 'Herbalist') ? 'selected' : '' %>>Herbalist</option>
-        <option value="Horseman" <%= (challenge.category === 'Horseman') ? 'selected' : '' %>>Horseman</option>
-        <option value="Master Hunter" <%= (challenge.category === 'Master Hunter') ? 'selected' : '' %>>Master Hunter</option>
-        <option value="Sharpshooter" <%= (challenge.category === 'Sharpshooter') ? 'selected' : '' %>>Sharpshooter</option>
-        <option value="Survivalist" <%= (challenge.category === 'Survivalist') ? 'selected' : '' %>>Survivalist</option>
-        <option value="Weapons Expert" <%= (challenge.category === 'Weapons Expert') ? 'selected' : '' %>>Weapons Expert</option>
-    </select>
-    <br>
-    <label for="steps">Steps:</label>
-    <textarea id="steps" name="steps"><%= challenge.steps %></textarea>
+<form action="/challenges/<%= challenge._id%>?_method=PUT" method="POST">
+    <h3><%= challenge.challenge.name %></h3>
     <br>
     <label for="status">Status:</label>
     <select id="status" name="status">
-        <option value="Incomplete" <%= (challenge.status === 'Incomplete') ? 'selected' : '' %>>Incomplete</option>
-        <option value="In Progress" <%= (challenge.status === 'In Progress') ? 'selected' : '' %>>In Progress</option>
-        <option value="Complete" <%= (challenge.status === 'Complete') ? 'selected' : '' %>>Complete</option>
+        <option value="Incomplete" <%= challenge.status === "Incomplete" ? 'selected' : '' %>>Incomplete</option>
+        <option value="In Progress" <%= challenge.status === "In Progress" ? 'selected' : '' %>>In Progress</option>
+        <option value="Complete" <%= challenge.status === "Complete" ? 'selected' : '' %>>Complete</option>
     </select>
     <br>
-    <button type="submit">Update Challenge</button>
+    <button type="submit">Save Challenge</button>
 </form>
-<a href="/challenges/<%= challenge._id %>">Back to Details</a>
 
 <%- include('../partials/footer') %>

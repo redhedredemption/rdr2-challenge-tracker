@@ -10,9 +10,8 @@
                     <p>Description: <%= progressItem.challenge.description %></p>
                     <p>Status: <%= progressItem.status %></p>
                     <a href="/challenges/<%= progressItem.challenge._id %>">View Details</a>
-                    <a href="/challenges/<%= progressItem.challenge._id %>/edit">Edit</a>
-                    <form action="/challenges/<%= progressItem.challenge._id %>" method="POST" style="display: inline;">
-                        <input type="hidden" name="_method" value="DELETE">
+                    <a href="/challenges/<%= progressItem._id %>/edit">Edit</a>
+                    <form action="/challenges/<%= progressItem._id %>?_method=DELETE" method="POST">
                         <button type="submit" class="btn-delete">Delete</button>
                     </form>
                 </li>

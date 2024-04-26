@@ -6,10 +6,9 @@
 <p><strong>Steps:</strong></p>
 <p><%= challenge.steps %></p>
 <p><strong>Status:</strong> <%= challenge.status %></p>
-<a href="/challenges/<%= challenge._id %>/edit">Edit</a>
-<form action="/challenges/<%= challenge._id %>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <button type="submit">Delete</button>
-</form>
+<!-- <a href="/challenges/<%= challenge._id %>/edit">Edit</a>
+<form action="/challenges/<%= challenge._id %>?_method=DELETE" method="POST">
+    <button type="submit" class="btn-delete">Delete</button> -->
+<!-- </form> -->
 
 <%- include('../partials/footer') %>

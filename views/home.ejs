@@ -1,7 +1,15 @@
 <% include partials/header %>
 <main>
-  <h1>Welcome to the RDR2 Challenge Tracker!</h1>
-  <h3>Please log in to explore challenges, track your progress, and more.</h3>
-  <p><a href="/auth/google" class="login">Log in with Google<img src="https://i.imgur.com/FHjYyi0.png"></a></p>
+  <% if (user) { %>
+    <p>Welcome back <%= user.name %>!  Click any link to begin. </p>
+  <% } else { %>
+    <h1>Welcome to the RDR2 Challenge Tracker!</h1>
+    <h3>Please log in to explore challenges, track your progress, and more.</h3>
+    <p><a href="/auth/google" class="login">Log in with Google<img src="https://i.imgur.com/FHjYyi0.png"></a></p>
+  <% } %>
 </main>
+
+
+
+
 <% include partials/footer %>
