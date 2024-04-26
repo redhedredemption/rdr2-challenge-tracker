@@ -11,6 +11,4 @@ router.get('/:id/edit', ensureLoggedIn, challengeController.getEditChallengeForm
 router.delete('/:id', ensureLoggedIn, challengeController.deleteItem);
 router.put('/:id', ensureLoggedIn, challengeController.update);
 
-
-
 module.exports = router;

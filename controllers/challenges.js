@@ -32,9 +32,6 @@ async function getEditChallengeForm(req, res) {
     }
 }
 
-
-
-
 async function deleteItem(req, res) {
     console.log(req.params.id)
     const progress = await Progress.findOne({'challenges._id': req.params.id, 'challenges.user': req.user._id});
